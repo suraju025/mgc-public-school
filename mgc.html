@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MGC Public School — Maa Gayatri Public School, Jaunpur</title>
+  <meta name="description" content="Maa Gayatri Public School (MGC), Saraimohiuddinpur, Shahganj, Jaunpur, UP. Holistic development through academic excellence and strong values. Admissions open 2026-27."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --saffron:    #E8681A;
+      --deep:       #1A2744;
+      --gold:       #C9972B;
+      --cream:      #FBF6EE;
+      --white:      #FFFFFF;
+      --muted:      #6B7280;
+      --border:     #E5DDD0;
+      --green:      #2D6A4F;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--deep);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw;
+      height: 68px;
+      background: rgba(251,246,238,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+    }
+    .nav-emblem {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--saffron), var(--gold));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: white; font-weight: 900;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      flex-shrink: 0;
+    }
+    .nav-title { line-height: 1.2; }
+    .nav-title strong { display: block; font-size: 14px; font-weight: 600; color: var(--deep); }
+    .nav-title span { font-size: 11px; color: var(--muted); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      text-decoration: none; font-size: 14px; font-weight: 500;
+      color: var(--deep); transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--saffron); }
+    .nav-cta {
+      background: var(--saffron); color: white;
+      padding: 9px 20px; border-radius: 6px;
+      font-size: 13px; font-weight: 600; text-decoration: none;
+      transition: background .2s; white-space: nowrap;
+    }
+    .nav-cta:hover { background: #c95b12; }
+    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 101; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--deep); border-radius: 2px; transition: .3s; }
+    
+    /* Hamburger Open Animation */
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* Mobile Nav Overlay Menu */
+    .mobile-menu-overlay {
+      position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+      background: var(--cream); z-index: 99; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 32px; transition: right 0.4s ease;
+      padding: 40px; text-align: center;
+    }
+    .mobile-menu-overlay.active { right: 0; }
+    .mobile-menu-overlay .nav-links-mobile { list-style: none; display: flex; flex-direction: column; gap: 24px; }
+    .mobile-menu-overlay .nav-links-mobile a { text-decoration: none; font-size: 20px; font-weight: 600; color: var(--deep); }
+    .mobile-menu-overlay .nav-cta-mobile { width: 100%; max-width: 280px; text-align: center; margin-top: 16px; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      padding: 68px 5vw 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 60px 80px 0;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #FEF3E2; border: 1px solid #F5C97E;
+      padding: 6px 14px; border-radius: 100px;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 24px; width: fit-content;
+    }
+    .hero-eyebrow::before { content: '●'; font-size: 8px; color: var(--saffron); }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4.5vw, 60px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--deep);
+      margin-bottom: 12px;
+    }
+    .hero-hindi {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: clamp(18px, 2vw, 26px);
+      color: var(--saffron);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 16px; color: var(--muted); line-height: 1.7;
+      max-width: 460px; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--saffron); color: white;
+      padding: 14px 28px; border-radius: 8px;
+      font-weight: 600; font-size: 15px; text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+      box-shadow: 0 4px 14px rgba(232,104,26,.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(232,104,26,.4); }
+    .btn-secondary {
+      border: 2px solid var(--deep); color: var(--deep);
+      padding: 14px 28px; border-radius: 8px;
+      font-weight: 600; font-size: 15px; text-decoration: none;
+      transition: background .15s, color .15s; cursor: pointer;
+    }
+    .btn-secondary:hover { background: var(--deep); color: white; }
+
+    .hero-stats {
+      display: flex; gap: 32px; margin-top: 48px;
+      padding-top: 32px; border-top: 1px solid var(--border);
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 900; color: var(--saffron);
+      line-height: 1;
+    }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    .hero-right {
+      background: linear-gradient(160deg, var(--deep) 0%, #243356 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-pattern {
+      position: absolute; inset: 0; opacity: .05;
+      background-image: repeating-linear-gradient(
+        45deg, white 0, white 1px, transparent 0, transparent 50%
+      );
+      background-size: 20px 20px;
+    }
+    .hero-card {
+      position: relative; z-index: 2;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px; padding: 40px;
+      max-width: 360px; text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    .hero-card-icon {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--saffron), var(--gold));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; margin: 0 auto 20px;
+    }
+    .hero-card h3 {
+      color: white; font-family: 'Playfair Display', serif;
+      font-size: 22px; margin-bottom: 10px;
+    }
+    .hero-card p { color: rgba(255,255,255,.7); font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
+    .hero-card-badge {
+      background: var(--saffron); color: white;
+      padding: 8px 20px; border-radius: 100px;
+      font-size: 13px; font-weight: 700; display: inline-block;
+    }
+    .floating-tag {
+      position: absolute; background: white; border-radius: 12px;
+      padding: 10px 16px; box-shadow: 0 8px 24px rgba(0,0,0,.15);
+      display: flex; align-items: center; gap: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+    .floating-tag .tag-icon { font-size: 22px; }
+    .floating-tag .tag-text { font-size: 12px; font-weight: 600; color: var(--deep); line-height: 1.3; }
+    .floating-tag .tag-sub { font-size: 10px; color: var(--muted); }
+    .tag-1 { top: 15%; left: -20px; animation-delay: 0s; }
+    .tag-2 { bottom: 20%; right: -20px; animation-delay: 1.5s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 5vw; }
+    .section-label {
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--saffron); margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 900; line-height: 1.15; color: var(--deep);
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 16px; color: var(--muted); line-height: 1.7;
+      max-width: 560px;
+    }
+    .section-header { margin-bottom: 52px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-sub { margin: 0 auto; }
+
+    /* ── ABOUT ── */
+    #about { background: white; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-visual {
+      background: linear-gradient(135deg, #1A2744 0%, #2D6A4F 100%);
+      border-radius: 20px; padding: 48px 40px;
+      position: relative; overflow: hidden;
+    }
+    .about-visual::before {
+      content: 'माँ गायत्री'; position: absolute; bottom: -10px; right: -10px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 80px; font-weight: 700; opacity: .06;
+      color: white; line-height: 1;
+    }
+    .about-value {
+      display: flex; align-items: flex-start; gap: 16px;
+      margin-bottom: 28px; position: relative; z-index: 1;
+    }
+    .about-value:last-child { margin-bottom: 0; }
+    .value-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: rgba(255,255,255,.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .value-text h4 { color: white; font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .value-text p { color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.5; }
+    .about-content p { color: var(--muted); font-size: 15px; line-height: 1.8; margin-bottom: 20px; }
+    .mission-quote {
+      border-left: 3px solid var(--saffron);
+      padding: 16px 20px;
+      background: #FEF3E2;
+      border-radius: 0 10px 10px 0;
+      margin: 28px 0;
+      font-style: italic;
+      color: var(--deep);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .rating-row {
+      display: flex; align-items: center; gap: 12px; margin-top: 24px;
+    }
+    .stars { color: var(--gold); font-size: 20px; letter-spacing: 2px; }
+    .rating-text { font-size: 14px; color: var(--muted); }
+    .rating-text strong { color: var(--deep); }
+
+    /* ── SUBJECTS ── */
+    #subjects { background: var(--cream); }
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .subject-card {
+      background: white; border-radius: 14px;
+      padding: 28px 24px; text-align: center;
+      border: 1px solid var(--border);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      cursor: default;
+    }
+    .subject-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      border-color: var(--saffron);
+    }
+    .subject-icon { font-size: 36px; margin-bottom: 12px; display: block; }
+    .subject-card h4 { font-size: 15px; font-weight: 600; color: var(--deep); }
+    .subject-card p { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+    /* ── WHY CHOOSE ── */
+    #why { background: white; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .why-card {
+      border-radius: 16px; padding: 32px 28px;
+      border: 1px solid var(--border);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,0,0,.07); }
+    .why-card.accent { background: var(--deep); border-color: var(--deep); }
+    .why-card.accent h3, .why-card.accent p { color: white; }
+    .why-card.accent p { opacity: .7; }
+    .why-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px; font-weight: 900;
+      color: var(--border); line-height: 1;
+      margin-bottom: 12px;
+    }
+    .why-card.accent .why-num { color: rgba(255,255,255,.15); }
+    .why-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--deep); }
+    .why-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ── ADMISSIONS ── */
+    #admissions {
+      background: linear-gradient(135deg, var(--saffron) 0%, #c95b12 100%);
+    }
+    #admissions .section-label { color: rgba(255,255,255,.7); }
+    #admissions .section-title { color: white; }
+    #admissions .section-sub { color: rgba(255,255,255,.8); }
+    .admissions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .admission-steps { margin-top: 36px; }
+    .step {
+      display: flex; gap: 20px; align-items: flex-start;
+      margin-bottom: 28px;
+    }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,.2); border: 2px solid rgba(255,255,255,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: white; font-size: 14px;
+      flex-shrink: 0;
+    }
+    .step-text h4 { color: white; font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .step-text p { color: rgba(255,255,255,.7); font-size: 13px; line-height: 1.5; }
+    .admission-card {
+      background: white; border-radius: 20px;
+      padding: 40px 36px; text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,.15);
+    }
+    .admission-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; color: var(--deep); margin-bottom: 8px;
+    }
+    .admission-card p { color: var(--muted); font-size: 14px; margin-bottom: 28px; line-height: 1.6; }
+    .contact-info { text-align: left; margin-bottom: 24px; }
+    .contact-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row .icon { font-size: 18px; width: 28px; text-align: center; flex-shrink: 0; }
+    .contact-row a { color: var(--deep); text-decoration: none; font-weight: 500; }
+    .contact-row a:hover { color: var(--saffron); }
+    .wa-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: #25D366; color: white;
+      padding: 14px 28px; border-radius: 10px;
+      font-weight: 700; font-size: 15px; text-decoration: none;
+      transition: background .2s;
+    }
+    .wa-btn:hover { background: #1aab52; }
+
+    /* ── REVIEWS ── */
+    #reviews { background: var(--cream); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .review-card {
+      background: white; border-radius: 16px; padding: 28px 24px;
+      border: 1px solid var(--border);
+    }
+    .review-stars { color: var(--gold); font-size: 16px; margin-bottom: 14px; }
+    .review-text { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--saffron), var(--gold));
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 700; font-size: 14px;
+    }
+    .author-name { font-size: 14px; font-weight: 600; color: var(--deep); }
+    .author-role { font-size: 12px; color: var(--muted); }
+
+    /* ── FIND US ── */
+    #contact { background: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .map-container {
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--border);
+      height: 360px;
+    }
+    .map-container iframe { width: 100%; height: 100%; border: none; }
+    .contact-details h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; margin-bottom: 24px; color: var(--deep);
+    }
+    .detail-row {
+      display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start;
+    }
+    .detail-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: #FEF3E2; display: flex; align-items: center;
+      justify-content: center; font-size: 20px; flex-shrink: 0;
+    }
+    .detail-info h4 { font-size: 14px; font-weight: 600; color: var(--deep); margin-bottom: 4px; }
+    .detail-info p, .detail-info a {
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+      text-decoration: none;
+    }
+    .detail-info a:hover { color: var(--saffron); }
+    .social-row { display: flex; gap: 12px; margin-top: 28px; }
+    .social-btn {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border);
+      font-size: 13px; font-weight: 600; color: var(--deep);
+      text-decoration: none; transition: border-color .2s, color .2s;
+    }
+    .social-btn:hover { border-color: var(--saffron); color: var(--saffron); }
+    .social-btn span { font-size: 18px; }
+
+    /* MODAL SCHEME */
+    .modal-backdrop {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(26, 39, 68, 0.6); backdrop-filter: blur(4px);
+      z-index: 1000; display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.active { display: flex; }
+    .calendar-modal {
+      background: var(--white); border-radius: 16px; width: 100%; max-width: 500px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15); overflow: hidden;
+      animation: modalFade 0.3s ease;
+    }
+    @keyframes modalFade {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .modal-header {
+      background: var(--deep); color: var(--white); padding: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .modal-header h3 { font-family: 'Playfair Display', serif; font-size: 20px; }
+    .close-modal-btn {
+      background: none; border: none; color: var(--white); font-size: 24px;
+      cursor: pointer; opacity: 0.8; transition: opacity 0.2s;
+    }
+    .close-modal-btn:hover { opacity: 1; }
+    .modal-body { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .calendar-item {
+      display: flex; align-items: center; gap: 16px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .calendar-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .cal-date {
+      background: #FEF3E2; color: var(--saffron); font-weight: 700;
+      padding: 8px 12px; border-radius: 8px; text-align: center; font-size: 13px;
+      min-width: 80px;
+    }
+    .cal-desc h4 { font-size: 14px; color: var(--deep); }
+    .cal-desc p { font-size: 12px; color: var(--muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--deep); color: rgba(255,255,255,.6);
+      padding: 48px 5vw 28px;
+    }
+    .footer-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.08);
+      gap: 40px; flex-wrap: wrap;
+    }
+    .footer-brand h3 {
+      font-family: 'Playfair Display', serif;
+      color: white; font-size: 22px; margin-bottom: 8px;
+    }
+    .footer-brand p { font-size: 13px; max-width: 280px; line-height: 1.6; }
+    .footer-links h4 { color: white; font-size: 13px; font-weight: 600; margin-bottom: 14px; text-transform: uppercase; letter-spacing: .06em; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 13px; transition: color .2s; }
+    .footer-links a:hover { color: var(--saffron); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 24px; font-size: 12px; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom a { color: rgba(255,255,255,.6); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--saffron); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right { min-height: 320px; }
+      .hero-left { padding: 60px 0; }
+      .tag-1 { display: none; } .tag-2 { display: none; }
+      .about-grid, .admissions-grid, .contact-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 20px; }
+      section { padding: 60px 5vw; }
+    }
+
+    /* ── SCROLL ANIMATION ── */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-emblem">म.ग.</div>
+    <div class="nav-title">
+      <strong>MGC Public School</strong>
+      <span>Shahganj, Jaunpur</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#subjects">Subjects</a></li>
+    <li><a href="#why">Why MGC</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/917080828257" class="nav-cta" target="_blank">Enquire Now</a>
+  <div class="hamburger" id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu-overlay" id="mobileMenu">
+  <ul class="nav-links-mobile">
+    <li><a href="#about">About</a></li>
+    <li><a href="#subjects">Subjects</a></li>
+    <li><a href="#why">Why MGC</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/917080828257" class="nav-cta nav-cta-mobile" target="_blank">Enquire Now</a>
+</div>
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Admissions Open 2026–27</div>
+    <h1 class="hero-h1">Maa Gayatri<br/>Public School</h1>
+    <div class="hero-hindi">माँ गायत्री पब्लिक स्कूल</div>
+    <p class="hero-sub">
+      Empowering young minds through academic excellence, strong values, and holistic development in the heart of Shahganj, Jaunpur.
+    </p>
+    <div class="hero-actions">
+      <a href="https://wa.me/917080828257" class="btn-primary" target="_blank">Apply for Admission</a>
+      <button class="btn-secondary" id="openCalendarBtn">Academic Calendar</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">4.1★</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">All</div>
+        <div class="stat-label">Subjects Covered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Support Available</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-pattern"></div>
+    <div class="floating-tag tag-1">
+      <div class="tag-icon">📚</div>
+      <div class="tag-text">
+        <div>All Subjects</div>
+        <div class="tag-sub">Maths · Science · English</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-icon">🏫</div>
+      <h3>Holistic Development</h3>
+      <p>We nurture not just academic ability, but character, curiosity, and confidence in every child who walks through our doors.</p>
+      <div class="hero-card-badge">Saraimohiuddinpur, UP</div>
+    </div>
+    <div class="floating-tag tag-2">
+      <div class="tag-icon">🌟</div>
+      <div class="tag-text">
+        <div>Top Rated</div>
+        <div class="tag-sub">Justdial · Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-value">
+        <div class="value-icon">🎓</div>
+        <div class="value-text">
+          <h4>Academic Excellence</h4>
+          <p>Comprehensive curriculum covering Mathematics, Sciences, Languages, and Social Studies.</p>
+        </div>
+      </div>
+      <div class="about-value">
+        <div class="value-icon">⚽</div>
+        <div class="value-text">
+          <h4>Sports & Physical Education</h4>
+          <p>Equal importance given to physical development alongside academics.</p>
+        </div>
+      </div>
+      <div class="about-value">
+        <div class="value-icon">🤝</div>
+        <div class="value-text">
+          <h4>Inclusive Environment</h4>
+          <p>A safe, vibrant learning space where every child is encouraged to explore their potential.</p>
+        </div>
+      </div>
+      <div class="about-value">
+        <div class="value-icon">💡</div>
+        <div class="value-text">
+          <h4>Critical Thinking</h4>
+          <p>Teaching students to think critically and grow into responsible global citizens.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title">Best Public School in Saraimohiuddinpur</h2>
+      <p>MGC Public School — Maa Gayatri Public School — is one of the best education centres in Saraimohiuddinpur, Shahganj, Jaunpur. We believe that education is a transformative journey for every child.</p>
+      <p>We strive to create a safe, vibrant, and inclusive learning environment where every child is encouraged to explore their unique potential and grow into a responsible global citizen.</p>
+      <div class="mission-quote">
+        "We believe learning is something all students are capable of, no matter their disposition or ability. We strive to ensure all students find learning easy and fun."
+      </div>
+      <p>Our hand-selected teachers are skilled, knowledgeable, and deeply understand the challenges students face — ensuring a wholesome and encouraging learning experience.</p>
+      <div class="rating-row">
+        <div class="stars">★★★★☆</div>
+        <div class="rating-text"><strong>4.1 / 5</strong> — Rated on Google & Justdial by verified parents</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="subjects">
+  <div class="section-header centered reveal">
+    <div class="section-label">Curriculum</div>
+    <h2 class="section-title">All Subjects Taught</h2>
+    <p class="section-sub">A broad and balanced curriculum designed to unlock every student's potential across academic and co-curricular areas.</p>
+  </div>
+  <div class="subjects-grid">
+    <div class="subject-card reveal">
+      <span class="subject-icon">➕</span>
+      <h4>Mathematics</h4>
+      <p>Number theory, algebra, geometry and problem solving</p>
+    </div>
+    <div class="subject-card reveal">
+      <span class="subject-icon">🔬</span>
+      <h4>Science</h4>
+      <p>Physics, Chemistry, and Biology with practical focus</p>
+    </div>
+    <div class="subject-card reveal">
+      <span class="subject-icon">🌍</span>
+      <h4>Social Studies</h4>
+      <p>History, Geography, Civics and current affairs</p>
+    </div>
+    <div class="subject-card reveal">
+      <span class="subject-icon">🇬🇧</span>
+      <h4>English</h4>
+      <p>Grammar, literature, reading and writing skills</p>
+    </div>
+    <div class="subject-card reveal">
+      <span class="subject-icon">🇮🇳</span>
+      <h4>Hindi</h4>
+      <p>Language, literature and Hindi grammar</p>
+    </div>
+    <div class="subject-card reveal">
+      <span class="subject-icon">🖥️</span>
+      <h4>Computer Science</h4>
+      <p>Basic programming, MS Office and digital literacy</p>
+    </div>
+    <div class="subject-card reveal">
+      <span class="subject-icon">🎨</span>
+      <h4>Art & Craft</h4>
+      <p>Creative expression and fine motor development</p>
+    </div>
+    <div class="subject-card reveal">
+      <span class="subject-icon">⚽</span>
+      <h4>Physical Education</h4>
+      <p>Fitness, team sports and health education</p>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="section-header reveal">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title">What Sets MGC Apart</h2>
+    <p class="section-sub">More than academics — we shape character, build confidence, and inspire lifelong learners.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-num">01</div>
+      <h3>Expert, Caring Teachers</h3>
+      <p>Hand-selected educators who are not only subject experts but genuinely understand how students learn and what they need to thrive.</p>
+    </div>
+    <div class="why-card accent reveal">
+      <div class="why-num">02</div>
+      <h3>Holistic Development</h3>
+      <p>Academics, sports, arts, and values — we nurture every dimension of a child's growth, not just exam results.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">03</div>
+      <h3>Safe & Inclusive</h3>
+      <p>A nurturing environment where every child — regardless of background or ability — feels welcomed, valued, and encouraged.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">04</div>
+      <h3>Updated Methodology</h3>
+      <p>We regularly examine and refresh our teaching methods to stay current, comprehensive, and effective for today's learners.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">05</div>
+      <h3>Strong Values</h3>
+      <p>Discipline, respect, curiosity, and responsibility are embedded into every aspect of school life beyond the classroom.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-num">06</div>
+      <h3>24/7 Availability</h3>
+      <p>Parents can reach us anytime for queries, admissions, and support. We're always there for your family.</p>
+    </div>
+  </div>
+</section>
+
+<section id="admissions">
+  <div class="admissions-grid">
+    <div class="reveal">
+      <div class="section-label">Admissions</div>
+      <h2 class="section-title">Join MGC for Session 2026–27</h2>
+      <p class="section-sub">Seats are filling fast. Secure your child's future with a school that truly cares.</p>
+      <div class="admission-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <h4>Contact Us on WhatsApp</h4>
+            <p>Send us a message with your child's name, age, and desired class.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <h4>Visit the School</h4>
+            <p>Come for a school tour and meet our faculty. Open 10:00 AM onwards.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <h4>Complete Registration</h4>
+            <p>Submit the admission form and required documents to confirm your seat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="admission-card reveal">
+      <h3>Reach Out Directly</h3>
+      <p>Contact us by phone, WhatsApp, or email to begin the admission process today.</p>
+      <div class="contact-info">
+        <div class="contact-row">
+          <span class="icon">📞</span>
+          <a href="tel:+917080828257">+91 70808 28257</a>
+        </div>
+        <div class="contact-row">
+          <span class="icon">✉️</span>
+          <a href="mailto:mgcpublicschool4@gmail.com">mgcpublicschool4@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="icon">📍</span>
+          <span>Saraimohiuddinpur, Sultanpur Road, Shahganj, Jaunpur — 223103</span>
+        </div>
+      </div>
+      <a href="https://wa.me/917080828257" class="wa-btn" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L0 24l6.335-1.508C8.05 23.445 9.986 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.497-5.197-1.367l-.373-.22-3.762.897.944-3.68-.242-.381A9.936 9.936 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-header centered reveal">
+    <div class="section-label">Parent Reviews</div>
+    <h2 class="section-title">What Parents Say</h2>
+    <p class="section-sub">Rated 4.1 on Google and Justdial by families from Saraimohiuddinpur and beyond.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"The teachers here are very dedicated and caring. My child has improved a lot in both studies and confidence since joining MGC. Highly recommended for parents in Shahganj area."</p>
+      <div class="review-author">
+        <div class="avatar">R</div>
+        <div>
+          <div class="author-name">Ramesh Verma</div>
+          <div class="author-role">Parent, Class 5 Student</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Good school with nice faculty. The school gives equal importance to sports and academics which is rare in this area. My son loves going to school every day."</p>
+      <div class="review-author">
+        <div class="avatar">S</div>
+        <div>
+          <div class="author-name">Sunita Yadav</div>
+          <div class="author-role">Parent, Class 3 Student</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"MGC Public School has created a wonderful environment for children. The holistic approach to education is visible in how well-rounded the students become. Very satisfied."</p>
+      <div class="review-author">
+        <div class="avatar">A</div>
+        <div>
+          <div class="author-name">Anita Singh</div>
+          <div class="author-role">Parent, Class 7 Student</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-header reveal">
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">Visit MGC Public School</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="map-container reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.0531868516134!2d82.6457199!3d26.0641151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39903fe539b7efd7%3A0xc3cf90538a7c6f0!2sMaa%20Gayatri%20Public%20School!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+        allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="MGC Public School Location">
+      </iframe>
+    </div>
+    <div class="contact-details reveal">
+      <h3>Get in Touch</h3>
+      <div class="detail-row">
+        <div class="detail-icon">📍</div>
+        <div class="detail-info">
+          <h4>Address</h4>
+          <p>Saraimohiuddinpur, Sultanpur Road<br/>Shahganj, Jaunpur — 223103<br/>Uttar Pradesh, India</p>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-icon">📞</div>
+        <div class="detail-info">
+          <h4>Phone</h4>
+          <a href="tel:+917080828257">+91 70808 28257</a>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-icon">✉️</div>
+        <div class="detail-info">
+          <h4>Email</h4>
+          <a href="mailto:mgcpublicschool4@gmail.com">mgcpublicschool4@gmail.com</a>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-icon">🕐</div>
+        <div class="detail-info">
+          <h4>Hours</h4>
+          <p>Opens at 10:00 AM daily<br/>Available 24/7 on WhatsApp</p>
+        </div>
+      </div>
+      <div class="social-row">
+        <a href="https://www.facebook.com/100076632024016" class="social-btn" target="_blank">
+          <span>📘</span> Facebook
+        </a>
+        <a href="https://www.instagram.com/m.g.c_public_school" class="social-btn" target="_blank">
+          <span>📸</span> Instagram
+        </a>
+        <a href="https://www.youtube.com/channel/UCVoia75pz6OlPF6vJmjOXlg" class="social-btn" target="_blank">
+          <span>▶️</span> YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal-backdrop" id="calendarModal">
+  <div class="calendar-modal">
+    <div class="modal-header">
+      <h3>Academic Events 2026</h3>
+      <button class="close-modal-btn" id="closeCalendarBtn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="calendar-item">
+        <div class="cal-date">April 06</div>
+        <div class="cal-desc">
+          <h4>New Session Starts</h4>
+          <p>Welcoming all new and returning students for academic term 2026–27.</p>
+        </div>
+      </div>
+      <div class="calendar-item">
+        <div class="cal-date">April 22</div>
+        <div class="cal-desc">
+          <h4>Earth Day & Plantation Campaign</h4>
+          <p>School-wide tree planting event and ecological awareness initiatives.</p>
+        </div>
+      </div>
+      <div class="calendar-item">
+        <div class="cal-date">May 15</div>
+        <div class="cal-desc">
+          <h4>Summer Break Starts</h4>
+          <p>School closes for standard summer holidays. Reopens early July.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>MGC Public School</h3>
+      <p>Maa Gayatri Public School — Empowering minds through academic excellence and strong values since establishment.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#why">Why MGC</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://wa.me/917080828257" target="_blank">WhatsApp</a></li>
+        <li><a href="https://www.facebook.com/100076632024016" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/m.g.c_public_school" target="_blank">Instagram</a></li>
+        <li><a href="https://www.youtube.com/channel/UCVoia75pz6OlPF6vJmjOXlg" target="_blank">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+917080828257">+91 70808 28257</a></li>
+        <li><a href="mailto:mgcpublicschool4@gmail.com">mgcpublicschool4@gmail.com</a></li>
+        <li><a>Saraimohiuddinpur, Shahganj</a></li>
+        <li><a>Jaunpur, UP — 223103</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MGC Public School — Maa Gayatri Public School. All rights reserved.</span>
+    <span>Saraimohiuddinpur, Shahganj, Jaunpur, UP 223103</span>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal framework
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Stagger grid loading delays
+  document.querySelectorAll('.subjects-grid, .why-grid, .reviews-grid').forEach(grid => {
+    grid.querySelectorAll('.reveal').forEach((card, i) => {
+      card.style.transitionDelay = (i * 0.07) + 's';
+    });
+  });
+
+  // Mobile Drawer Toggle Mechanics
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileLinks = document.querySelectorAll('.mobile-menu-overlay a');
+
+  function toggleMobileMenu() {
+    menuToggle.classList.toggle('open');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  }
+
+  menuToggle.addEventListener('click', toggleMobileMenu);
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('active')) toggleMobileMenu();
+    });
+  });
+
+  // Modal Control Mechanics
+  const openCalendarBtn = document.getElementById('openCalendarBtn');
+  const closeCalendarBtn = document.getElementById('closeCalendarBtn');
+  const calendarModal = document.getElementById('calendarModal');
+
+  openCalendarBtn.addEventListener('click', () => calendarModal.classList.add('active'));
+  closeCalendarBtn.addEventListener('click', () => calendarModal.classList.remove('active'));
+  calendarModal.addEventListener('click', (e) => {
+    if (e.target === calendarModal) calendarModal.classList.remove('active');
+  });
+
+  // Smooth Navigation Intersections Highlighting
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--saffron)' : '';
+    });
+  });
+</script>
+</body>
+</html>
